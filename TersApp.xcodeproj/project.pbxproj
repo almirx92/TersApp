@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA64D07D2662DA110019771D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64D07C2662DA110019771D /* AppDelegate.swift */; };
+		FA64D07F2662DA110019771D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64D07E2662DA110019771D /* SceneDelegate.swift */; };
+		FA64D0812662DA110019771D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64D0802662DA110019771D /* ViewController.swift */; };
+		FA64D0842662DA110019771D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA64D0822662DA110019771D /* Main.storyboard */; };
+		FA64D0862662DA120019771D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA64D0852662DA120019771D /* Assets.xcassets */; };
+		FA64D0892662DA120019771D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA64D0872662DA120019771D /* LaunchScreen.storyboard */; };
+		FA64D0DC266492FA0019771D /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA64D0792662DA110019771D /* TersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA64D07C2662DA110019771D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA64D07E2662DA110019771D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA64D0802662DA110019771D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA64D0832662DA110019771D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA64D0852662DA120019771D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA64D0882662DA120019771D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA64D08A2662DA120019771D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA64D0B72662DF0B0019771D /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		FA64D0BC2662DFAB0019771D /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FA64D0BE2662DFAB0019771D /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0BF2662DFAB0019771D /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0C02662DFAB0019771D /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		FA64D0C12662DFAB0019771D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FA64D0C22662DFAC0019771D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FA64D0C32662DFAC0019771D /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0C42662DFAC0019771D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FA64D0C52662DFAC0019771D /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0C62662DFAC0019771D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA64D0C72662DFAC0019771D /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		FA64D0C82662DFAC0019771D /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FA64D0C92662DFAC0019771D /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		FA64D0CA2662DFAC0019771D /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0CB2662DFAC0019771D /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0CC2662DFAC0019771D /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0CD2662DFAC0019771D /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA64D0762662DA110019771D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA64D0702662DA110019771D = {
+			isa = PBXGroup;
+			children = (
+				FA64D07B2662DA110019771D /* TersApp */,
+				FA64D07A2662DA110019771D /* Products */,
+				FA64D0B62662DEE60019771D /* fonts */,
+			);
+			sourceTree = "<group>";
+		};
+		FA64D07A2662DA110019771D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA64D0792662DA110019771D /* TersApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA64D07B2662DA110019771D /* TersApp */ = {
+			isa = PBXGroup;
+			children = (
+				FA64D07C2662DA110019771D /* AppDelegate.swift */,
+				FA64D07E2662DA110019771D /* SceneDelegate.swift */,
+				FA64D0802662DA110019771D /* ViewController.swift */,
+				FA64D0822662DA110019771D /* Main.storyboard */,
+				FA64D0852662DA120019771D /* Assets.xcassets */,
+				FA64D0872662DA120019771D /* LaunchScreen.storyboard */,
+				FA64D08A2662DA120019771D /* Info.plist */,
+				FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */,
+			);
+			path = TersApp;
+			sourceTree = "<group>";
+		};
+		FA64D0B62662DEE60019771D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA64D0CC2662DFAC0019771D /* Poppins-BlackItalic.ttf */,
+				FA64D0C42662DFAC0019771D /* Poppins-Bold.ttf */,
+				FA64D0CB2662DFAC0019771D /* Poppins-BoldItalic.ttf */,
+				FA64D0BC2662DFAB0019771D /* Poppins-ExtraBold.ttf */,
+				FA64D0C32662DFAC0019771D /* Poppins-ExtraBoldItalic.ttf */,
+				FA64D0C82662DFAC0019771D /* Poppins-ExtraLight.ttf */,
+				FA64D0BF2662DFAB0019771D /* Poppins-ExtraLightItalic.ttf */,
+				FA64D0C92662DFAC0019771D /* Poppins-Italic.ttf */,
+				FA64D0C72662DFAC0019771D /* Poppins-Light.ttf */,
+				FA64D0C52662DFAC0019771D /* Poppins-LightItalic.ttf */,
+				FA64D0C22662DFAC0019771D /* Poppins-Medium.ttf */,
+				FA64D0CD2662DFAC0019771D /* Poppins-MediumItalic.ttf */,
+				FA64D0C12662DFAB0019771D /* Poppins-Regular.ttf */,
+				FA64D0C62662DFAC0019771D /* Poppins-SemiBold.ttf */,
+				FA64D0BE2662DFAB0019771D /* Poppins-SemiBoldItalic.ttf */,
+				FA64D0C02662DFAB0019771D /* Poppins-Thin.ttf */,
+				FA64D0CA2662DFAC0019771D /* Poppins-ThinItalic.ttf */,
+				FA64D0B72662DF0B0019771D /* Poppins-Black.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA64D0782662DA110019771D /* TersApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA64D08D2662DA120019771D /* Build configuration list for PBXNativeTarget "TersApp" */;
+			buildPhases = (
+				FA64D0752662DA110019771D /* Sources */,
+				FA64D0762662DA110019771D /* Frameworks */,
+				FA64D0772662DA110019771D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TersApp;
+			productName = TersApp;
+			productReference = FA64D0792662DA110019771D /* TersApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA64D0712662DA110019771D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FA64D0782662DA110019771D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = FA64D0742662DA110019771D /* Build configuration list for PBXProject "TersApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA64D0702662DA110019771D;
+			productRefGroup = FA64D07A2662DA110019771D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA64D0782662DA110019771D /* TersApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA64D0772662DA110019771D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA64D0892662DA120019771D /* LaunchScreen.storyboard in Resources */,
+				FA64D0862662DA120019771D /* Assets.xcassets in Resources */,
+				FA64D0842662DA110019771D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA64D0752662DA110019771D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA64D0812662DA110019771D /* ViewController.swift in Sources */,
+				FA64D0DC266492FA0019771D /* UIColor+HexColor.swift in Sources */,
+				FA64D07D2662DA110019771D /* AppDelegate.swift in Sources */,
+				FA64D07F2662DA110019771D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA64D0822662DA110019771D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA64D0832662DA110019771D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA64D0872662DA120019771D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA64D0882662DA120019771D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA64D08B2662DA120019771D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA64D08C2662DA120019771D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA64D08E2662DA120019771D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TersApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tershouse.TersApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA64D08F2662DA120019771D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TersApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tershouse.TersApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA64D0742662DA110019771D /* Build configuration list for PBXProject "TersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA64D08B2662DA120019771D /* Debug */,
+				FA64D08C2662DA120019771D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA64D08D2662DA120019771D /* Build configuration list for PBXNativeTarget "TersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA64D08E2662DA120019771D /* Debug */,
+				FA64D08F2662DA120019771D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA64D0712662DA110019771D /* Project object */;
+}
