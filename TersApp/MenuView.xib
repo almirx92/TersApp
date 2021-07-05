@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="TersApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="1056" id="qaT-2c-Jcw" customClass="MenuView" customModule="TersApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="1024"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qaT-2c-Jcw" id="F11-KU-RfL">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="1024"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TersLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YtC-AY-dn2">
+                        <rect key="frame" x="24" y="33" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="2Gf-PX-73m"/>
+                            <constraint firstAttribute="width" constant="32" id="I1D-VX-VcS"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lQo-JU-fGY">
+                        <rect key="frame" x="16" y="423" width="48" height="178"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhb-mq-Qzd">
+                                <rect key="frame" x="0.0" y="0.0" width="48" height="22"/>
+                                <state key="normal" image="Cube4"/>
+                                <connections>
+                                    <action selector="homeButtonAction:" destination="-1" eventType="touchUpInside" id="gMJ-lO-3vZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-Yi-hvN">
+                                <rect key="frame" x="0.0" y="52" width="48" height="22"/>
+                                <state key="normal" image="SearchTers"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-ja-I4b">
+                                <rect key="frame" x="0.0" y="104" width="48" height="22"/>
+                                <state key="normal" image="ListTers"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpS-Cf-XHj">
+                                <rect key="frame" x="0.0" y="156" width="48" height="22"/>
+                                <state key="normal" image="BookmarkTers"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="lQo-JU-fGY" secondAttribute="trailing" id="5IP-Qq-VPz"/>
+                    <constraint firstItem="YtC-AY-dn2" firstAttribute="top" secondItem="F11-KU-RfL" secondAttribute="topMargin" constant="22" id="Rwy-e8-kFg"/>
+                    <constraint firstItem="YtC-AY-dn2" firstAttribute="centerX" secondItem="F11-KU-RfL" secondAttribute="centerX" id="U6K-Zn-suY"/>
+                    <constraint firstItem="lQo-JU-fGY" firstAttribute="leading" secondItem="F11-KU-RfL" secondAttribute="leadingMargin" id="n5x-gm-kmn"/>
+                    <constraint firstItem="lQo-JU-fGY" firstAttribute="centerY" secondItem="F11-KU-RfL" secondAttribute="centerY" id="z54-Hc-JdZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="DocBtn" destination="MxA-Yi-hvN" id="aEE-zs-1Zd"/>
+                <outlet property="bookmarkBtn" destination="LpS-Cf-XHj" id="6lO-Az-qGg"/>
+                <outlet property="dashBoardBtn" destination="rhb-mq-Qzd" id="Hio-KA-YvU"/>
+                <outlet property="srcBtn" destination="HiR-ja-I4b" id="EHE-zU-EXm"/>
+            </connections>
+            <point key="canvasLocation" x="-735" y="-35"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="BookmarkTers" width="14.5" height="18"/>
+        <image name="Cube4" width="17" height="17"/>
+        <image name="ListTers" width="17" height="19"/>
+        <image name="SearchTers" width="17.5" height="17"/>
+        <image name="TersLogo" width="319.5" height="320"/>
+    </resources>
+</document>

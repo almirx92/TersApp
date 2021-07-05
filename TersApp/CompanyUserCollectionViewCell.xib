@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CompanyUserCollectionViewCell" customModule="TersApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="272"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="272"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISo-qe-HUk">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="272"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9Y-6U-KBj">
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="272"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Users" translatesAutoresizingMaskIntoConstraints="NO" id="zlN-e7-JMK">
+                                        <rect key="frame" x="0.0" y="30" width="260" height="88"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elson Gullen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnY-hg-3Zt">
+                                        <rect key="frame" x="82.5" y="148" width="88" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nekiemail@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbC-sk-Zy2">
+                                        <rect key="frame" x="71" y="175" width="118.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hWv-QO-5bx">
+                                        <rect key="frame" x="38" y="219.5" width="184" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgK-kX-4xg">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="29"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                <state key="normal" title="Profil">
+                                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapProfileBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="g0d-6h-dem"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lug-FH-Wsg">
+                                                <rect key="frame" x="97" y="0.0" width="87" height="29"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                                <state key="normal" title="Posalji mejl">
+                                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapSendEmailBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="KDw-Z8-h2Q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="LnY-hg-3Zt" firstAttribute="leading" secondItem="C9Y-6U-KBj" secondAttribute="leading" constant="82.5" id="3ZW-Vc-ZHo"/>
+                                    <constraint firstItem="LnY-hg-3Zt" firstAttribute="top" secondItem="zlN-e7-JMK" secondAttribute="bottom" constant="30" id="7QB-x1-8D2"/>
+                                    <constraint firstItem="kbC-sk-Zy2" firstAttribute="centerX" secondItem="hWv-QO-5bx" secondAttribute="centerX" id="8vH-uu-nmv"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWv-QO-5bx" secondAttribute="trailing" constant="38" id="Dnu-w2-kbM"/>
+                                    <constraint firstItem="hWv-QO-5bx" firstAttribute="leading" secondItem="C9Y-6U-KBj" secondAttribute="leading" constant="38" id="MlK-da-5Z9"/>
+                                    <constraint firstItem="zlN-e7-JMK" firstAttribute="leading" secondItem="C9Y-6U-KBj" secondAttribute="leading" id="ZTN-rq-cQc"/>
+                                    <constraint firstItem="zlN-e7-JMK" firstAttribute="top" secondItem="C9Y-6U-KBj" secondAttribute="top" constant="30" id="bpc-pn-jfF"/>
+                                    <constraint firstAttribute="trailing" secondItem="zlN-e7-JMK" secondAttribute="trailing" id="kMX-5q-LCI"/>
+                                    <constraint firstItem="kbC-sk-Zy2" firstAttribute="centerX" secondItem="zlN-e7-JMK" secondAttribute="centerX" id="kap-C0-Owx"/>
+                                    <constraint firstItem="kbC-sk-Zy2" firstAttribute="top" secondItem="LnY-hg-3Zt" secondAttribute="bottom" constant="8" id="m8Q-Ka-mcE"/>
+                                    <constraint firstItem="hWv-QO-5bx" firstAttribute="top" secondItem="kbC-sk-Zy2" secondAttribute="bottom" constant="30" id="rOq-HA-NJ4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C9Y-6U-KBj" secondAttribute="trailing" id="SmB-Ii-k3s"/>
+                            <constraint firstItem="C9Y-6U-KBj" firstAttribute="leading" secondItem="ISo-qe-HUk" secondAttribute="leading" id="dAw-qf-qeC"/>
+                            <constraint firstItem="C9Y-6U-KBj" firstAttribute="top" secondItem="ISo-qe-HUk" secondAttribute="top" id="il4-PU-iGi"/>
+                            <constraint firstAttribute="bottom" secondItem="C9Y-6U-KBj" secondAttribute="bottom" id="z9e-GJ-d7Y"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ISo-qe-HUk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6JM-wY-q6V"/>
+                <constraint firstItem="ISo-qe-HUk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EQE-Ou-y9E"/>
+                <constraint firstAttribute="trailing" secondItem="ISo-qe-HUk" secondAttribute="trailing" id="jsM-tj-k0f"/>
+                <constraint firstAttribute="bottom" secondItem="ISo-qe-HUk" secondAttribute="bottom" id="nHd-UT-oRP"/>
+            </constraints>
+            <size key="customSize" width="370" height="307"/>
+            <connections>
+                <outlet property="companyUserViewContainer" destination="C9Y-6U-KBj" id="NpW-iE-dhC"/>
+                <outlet property="profileBtn" destination="EgK-kX-4xg" id="lfo-7c-Lbq"/>
+                <outlet property="sendEmailBtn" destination="lug-FH-Wsg" id="PHo-Dg-qz9"/>
+            </connections>
+            <point key="canvasLocation" x="-5.7971014492753632" y="71.651785714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Users" width="88" height="88"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
