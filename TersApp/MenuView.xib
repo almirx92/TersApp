@@ -17,56 +17,86 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TersLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YtC-AY-dn2">
-                        <rect key="frame" x="24" y="33" width="32" height="32"/>
+                        <rect key="frame" x="24" y="16" width="32" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="2Gf-PX-73m"/>
                             <constraint firstAttribute="width" constant="32" id="I1D-VX-VcS"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lQo-JU-fGY">
-                        <rect key="frame" x="16" y="423" width="48" height="178"/>
+                        <rect key="frame" x="19" y="347" width="42" height="330"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhb-mq-Qzd">
-                                <rect key="frame" x="0.0" y="0.0" width="48" height="22"/>
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="JVQ-oi-nMI"/>
+                                    <constraint firstAttribute="height" constant="42" id="pYS-Rz-tEP"/>
+                                </constraints>
                                 <state key="normal" image="Cube4"/>
                                 <connections>
                                     <action selector="homeButtonAction:" destination="-1" eventType="touchUpInside" id="gMJ-lO-3vZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-Yi-hvN">
-                                <rect key="frame" x="0.0" y="52" width="48" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxA-Yi-hvN" userLabel="Src Btn">
+                                <rect key="frame" x="0.0" y="72" width="42" height="42"/>
                                 <state key="normal" image="SearchTers"/>
+                                <connections>
+                                    <action selector="srcBtnAction:" destination="qaT-2c-Jcw" eventType="touchUpInside" id="tAA-Kn-goX"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-ja-I4b">
-                                <rect key="frame" x="0.0" y="104" width="48" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiR-ja-I4b" userLabel="Doc Btn ">
+                                <rect key="frame" x="0.0" y="144" width="42" height="42"/>
                                 <state key="normal" image="ListTers"/>
+                                <connections>
+                                    <action selector="docBtnAction:" destination="-1" eventType="touchUpInside" id="fJ4-cW-CFy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpS-Cf-XHj">
-                                <rect key="frame" x="0.0" y="156" width="48" height="22"/>
+                                <rect key="frame" x="0.0" y="216" width="42" height="42"/>
                                 <state key="normal" image="BookmarkTers"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siV-Kv-6dd">
+                                <rect key="frame" x="0.0" y="288" width="42" height="42"/>
+                                <state key="normal" image="Add"/>
+                                <connections>
+                                    <action selector="AddBtnAction:" destination="-1" eventType="touchUpInside" id="g4e-ho-k8q"/>
+                                    <action selector="srcBtnAction:" destination="-1" eventType="touchUpInside" id="M1y-ry-BnY"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="MxA-Yi-hvN" firstAttribute="width" secondItem="rhb-mq-Qzd" secondAttribute="width" id="4f5-aV-bi5"/>
+                            <constraint firstItem="siV-Kv-6dd" firstAttribute="width" secondItem="rhb-mq-Qzd" secondAttribute="width" id="95M-Fs-IFw"/>
+                            <constraint firstItem="MxA-Yi-hvN" firstAttribute="height" secondItem="rhb-mq-Qzd" secondAttribute="height" id="Gr4-MT-WDP"/>
+                            <constraint firstItem="LpS-Cf-XHj" firstAttribute="height" secondItem="rhb-mq-Qzd" secondAttribute="height" id="Xuu-kz-maw"/>
+                            <constraint firstItem="HiR-ja-I4b" firstAttribute="height" secondItem="rhb-mq-Qzd" secondAttribute="height" id="gKE-F1-wsJ"/>
+                            <constraint firstItem="LpS-Cf-XHj" firstAttribute="width" secondItem="rhb-mq-Qzd" secondAttribute="width" id="rbk-ab-nyt"/>
+                            <constraint firstItem="HiR-ja-I4b" firstAttribute="width" secondItem="rhb-mq-Qzd" secondAttribute="width" id="tWC-It-C3g"/>
+                            <constraint firstItem="siV-Kv-6dd" firstAttribute="height" secondItem="rhb-mq-Qzd" secondAttribute="height" id="xMe-bb-wXW"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="lQo-JU-fGY" secondAttribute="trailing" id="5IP-Qq-VPz"/>
-                    <constraint firstItem="YtC-AY-dn2" firstAttribute="top" secondItem="F11-KU-RfL" secondAttribute="topMargin" constant="22" id="Rwy-e8-kFg"/>
+                    <constraint firstItem="YtC-AY-dn2" firstAttribute="top" secondItem="F11-KU-RfL" secondAttribute="topMargin" constant="5" id="Rwy-e8-kFg"/>
                     <constraint firstItem="YtC-AY-dn2" firstAttribute="centerX" secondItem="F11-KU-RfL" secondAttribute="centerX" id="U6K-Zn-suY"/>
-                    <constraint firstItem="lQo-JU-fGY" firstAttribute="leading" secondItem="F11-KU-RfL" secondAttribute="leadingMargin" id="n5x-gm-kmn"/>
-                    <constraint firstItem="lQo-JU-fGY" firstAttribute="centerY" secondItem="F11-KU-RfL" secondAttribute="centerY" id="z54-Hc-JdZ"/>
+                    <constraint firstItem="lQo-JU-fGY" firstAttribute="centerY" secondItem="F11-KU-RfL" secondAttribute="centerY" id="huD-Ln-VfY"/>
+                    <constraint firstItem="lQo-JU-fGY" firstAttribute="centerX" secondItem="F11-KU-RfL" secondAttribute="centerX" id="jnw-aA-zs4"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="AddBtn" destination="siV-Kv-6dd" id="Mdz-xL-98T"/>
                 <outlet property="DocBtn" destination="MxA-Yi-hvN" id="aEE-zs-1Zd"/>
                 <outlet property="bookmarkBtn" destination="LpS-Cf-XHj" id="6lO-Az-qGg"/>
                 <outlet property="dashBoardBtn" destination="rhb-mq-Qzd" id="Hio-KA-YvU"/>
-                <outlet property="srcBtn" destination="HiR-ja-I4b" id="EHE-zU-EXm"/>
+                <outlet property="docBtn" destination="HiR-ja-I4b" id="k97-1B-E5t"/>
+                <outlet property="srcBtn" destination="MxA-Yi-hvN" id="9hX-nI-0eG"/>
             </connections>
             <point key="canvasLocation" x="-735" y="-35"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Add" width="18" height="18"/>
         <image name="BookmarkTers" width="14.5" height="18"/>
         <image name="Cube4" width="17" height="17"/>
         <image name="ListTers" width="17" height="19"/>

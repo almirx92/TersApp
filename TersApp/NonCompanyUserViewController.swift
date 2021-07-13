@@ -42,9 +42,12 @@ class NonCompanyUserViewController: UIViewController, UICollectionViewDelegate, 
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.headerReferenceSize = CGSize(width: 0, height: 600)
+        layout.headerReferenceSize = CGSize(width: 0, height: 60)
         layout.sectionHeadersPinToVisibleBounds = true
         collectionView!.collectionViewLayout = layout
+    }
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override func viewWillLayoutSubviews() {
@@ -52,22 +55,19 @@ class NonCompanyUserViewController: UIViewController, UICollectionViewDelegate, 
         searchView.frame = collectionView.bounds
     }
 
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SearchHeaderView.identifier, for: indexPath) as! SearchHeaderView
-//        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.sectionHeadersPinToVisibleBounds = true
-//
-        //header.setup()
+
         return header
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
-        return CGSize(width: 0, height: 600)
+        return CGSize(width: 0, height: 20)
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return 0
     }
     
@@ -103,11 +103,33 @@ class NonCompanyUserViewController: UIViewController, UICollectionViewDelegate, 
       }
     
     func didTap(item: MenuItemType) {
-        print("tap na drugom ekranu")
+        switch item {
+        case .home:
+            print("printaj home")
+
+        case .add:
+            print("printaj add")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc =
+                storyboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
+            navigationController?.pushViewController(vc, animated: true)
+           
+        case .search:
+            print("Printaj src")
+
+        case .doc:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc =
+                storyboard.instantiateViewController(identifier: "ProfileUserViewController") as! ProfileUserViewController
+            navigationController?.pushViewController(vc, animated: true)
+
+        }
     }
     func didTap(item: SearchHeaderItemType) {
         print("pretraga")
     }
+  
+    
     
 }
 

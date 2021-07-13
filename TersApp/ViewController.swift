@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nonCompanyUserContainer: UIView!
-    
     @IBOutlet weak var companyUserContainer: UIView!
     @IBOutlet weak var searchContainer: UIView!
     @IBOutlet weak var allCategoriesBtn: UIButton!
@@ -32,7 +31,9 @@ class ViewController: UIViewController {
         menuView.delegate = self
     
     }
-    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     override func viewWillLayoutSubviews() {
         menuView.frame = menuContainer.bounds
     }
@@ -86,7 +87,28 @@ class ViewController: UIViewController {
 extension ViewController: MenuViewDelegate {
 
     func didTap(item: MenuItemType) {
-        print(item)
+        switch item {
+        case .home:
+            print("printaj home")
+        case .search:
+           print("Printaj src Almir")
+
+        case .add:
+            print("printaj add")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc =
+                storyboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
+            navigationController?.pushViewController(vc, animated: true)
+            
+        
+        case .doc:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc =
+                storyboard.instantiateViewController(identifier: "ProfileUserViewController") as! ProfileUserViewController
+            navigationController?.pushViewController(vc, animated: true)
+
+     
+        }
     }
 }
 
