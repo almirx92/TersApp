@@ -1,6 +1,7 @@
 
 
 import UIKit
+import Firebase
 
 class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MenuViewDelegate {
     
@@ -42,6 +43,13 @@ class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UIC
     
     @IBOutlet weak var searchBtn: UIButton!
     
+    // MARK: User Data
+    @IBOutlet weak var jibField: UITextField!
+    @IBOutlet weak var pdvField: UITextField!
+    @IBOutlet weak var companyAddField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var companyWebField: UITextField!
+   
     private let itemsPerRow: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(
       top: 10.0,
@@ -60,11 +68,31 @@ class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UIC
         docCollectionView.delegate = self
         docCollectionView.dataSource = self
         
+        let  db = Firestore.firestore()
+        db.collection("company-users").getDocuments() {
+            (QuerySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in QuerySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
         docCollectionView.register(UINib(nibName: ProfileUserViewControllerCells.documentsCollectionViewCell.rawValue, bundle: nil), forCellWithReuseIdentifier: ProfileUserViewControllerCells.documentsCollectionViewCell.rawValue)
         
         docCollectionView.register(UINib(nibName: ProfileUserViewControllerCells.contractCollectionViewCell.rawValue, bundle: nil), forCellWithReuseIdentifier: ProfileUserViewControllerCells.contractCollectionViewCell.rawValue)
     }
     
+    @IBAction func EditBtn(_ sender: Any) {
+        
+        let values: [String: Any] = [ "JIB": jibField.text!.lowercased(), "PDV": pdvField.text!.lowercased(),"Company Address": companyAddField.text!.lowercased(), "Email Address": emailField.text!.lowercased(),"Company Website": companyWebField.text!.lowercased()]
+        let db = Firestore.firestore()
+        db.collection("company-users").addDocument(data: values)
+        
+        
+        
+    }
     @IBAction func didTapDocuments(_ sender: Any) {
         tabLineDocView?.layer.backgroundColor = UIColor.systemYellow.cgColor
         tabLineContView?.layer.backgroundColor = UIColor.systemGray.cgColor
@@ -107,9 +135,16 @@ class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UIC
         infoContainer.layer.borderWidth = 1
         DocumentContainer.layer.borderColor = UIColor(hexString: "E5E5E5").cgColor
         DocumentContainer.layer.borderWidth = 1
-        
         tabLineDocView?.layer.backgroundColor = UIColor.systemYellow.cgColor
         tabLineContView?.layer.backgroundColor = UIColor.systemGray.cgColor
+        
+      
+        
+        
+    
+        
+        
+      
         
     }
     
@@ -136,7 +171,6 @@ class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UIC
         switch item {
         case .home:
             print("printaj home")
-
         case .add:
           print("printaj add")
   //          let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AAA6A56D645479E8BE32460 /* libPods-TersApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966238F1ED3EA3070F05E783 /* libPods-TersApp.a */; };
 		FA2C15D5269692BB000A65BA /* DocumentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C15D3269692BB000A65BA /* DocumentsCollectionViewCell.swift */; };
 		FA2C15D6269692BB000A65BA /* DocumentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2C15D4269692BB000A65BA /* DocumentsCollectionViewCell.xib */; };
 		FA2C15D926979D55000A65BA /* ContractCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C15D726979D55000A65BA /* ContractCollectionViewCell.swift */; };
@@ -24,7 +25,6 @@
 		FA4DB9C4266C34DB00651A92 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9C1266C34DB00651A92 /* Roboto-Medium.ttf */; };
 		FA4DB9C5266C34DB00651A92 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9C2266C34DB00651A92 /* Roboto-Regular.ttf */; };
 		FA4DB9C6266C34DB00651A92 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9C3266C34DB00651A92 /* Roboto-Thin.ttf */; };
-		FA4DB9C8266C35B400651A92 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA64D08A2662DA120019771D /* Info.plist */; };
 		FA4DB9CF266C565A00651A92 /* NonCompanyUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB9CE266C565A00651A92 /* NonCompanyUserViewController.swift */; };
 		FA4DB9D3267075AC00651A92 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB9D2267075AC00651A92 /* MainNavigationViewController.swift */; };
 		FA4DB9D62670780800651A92 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB9D42670780800651A92 /* UserCollectionViewCell.swift */; };
@@ -37,10 +37,14 @@
 		FA64D0892662DA120019771D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA64D0872662DA120019771D /* LaunchScreen.storyboard */; };
 		FA64D0DC266492FA0019771D /* UIColor+HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */; };
 		FABBEA61269BD9DC00BF52ED /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBEA60269BD9DC00BF52ED /* AddViewController.swift */; };
+		FABBEA89269F114300BF52ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FABBEA88269F114300BF52ED /* GoogleService-Info.plist */; };
 		FAF394752693F9DD00F4272D /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF394742693F9DD00F4272D /* ProfileUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19F9298F62A5392A7FC01CB3 /* Pods-TersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersApp.release.xcconfig"; path = "Target Support Files/Pods-TersApp/Pods-TersApp.release.xcconfig"; sourceTree = "<group>"; };
+		390D1BF0359A2EC32C6D29D9 /* Pods-TersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TersApp.debug.xcconfig"; path = "Target Support Files/Pods-TersApp/Pods-TersApp.debug.xcconfig"; sourceTree = "<group>"; };
+		966238F1ED3EA3070F05E783 /* libPods-TersApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TersApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C15D3269692BB000A65BA /* DocumentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA2C15D4269692BB000A65BA /* DocumentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentsCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA2C15D726979D55000A65BA /* ContractCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		FA64D0CD2662DFAC0019771D /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexColor.swift"; sourceTree = "<group>"; };
 		FABBEA60269BD9DC00BF52ED /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		FABBEA88269F114300BF52ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAF394742693F9DD00F4272D /* ProfileUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,12 +103,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AAA6A56D645479E8BE32460 /* libPods-TersApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F3AA9EEFC3FB71E5788CE7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				966238F1ED3EA3070F05E783 /* libPods-TersApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9A01DB758BED7392A7E0BBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				390D1BF0359A2EC32C6D29D9 /* Pods-TersApp.debug.xcconfig */,
+				19F9298F62A5392A7FC01CB3 /* Pods-TersApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA4DB9B3266C345C00651A92 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +147,8 @@
 				FA64D07A2662DA110019771D /* Products */,
 				FA64D0B62662DEE60019771D /* fonts */,
 				FA4DB9B3266C345C00651A92 /* images */,
+				B9A01DB758BED7392A7E0BBB /* Pods */,
+				4F3AA9EEFC3FB71E5788CE7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +185,7 @@
 				FA2C15D726979D55000A65BA /* ContractCollectionViewCell.swift */,
 				FA2C15D826979D55000A65BA /* ContractCollectionViewCell.xib */,
 				FABBEA60269BD9DC00BF52ED /* AddViewController.swift */,
+				FABBEA88269F114300BF52ED /* GoogleService-Info.plist */,
 			);
 			path = TersApp;
 			sourceTree = "<group>";
@@ -199,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA64D08D2662DA120019771D /* Build configuration list for PBXNativeTarget "TersApp" */;
 			buildPhases = (
+				18B508F8C8E211C8F37D1E76 /* [CP] Check Pods Manifest.lock */,
 				FA64D0752662DA110019771D /* Sources */,
 				FA64D0762662DA110019771D /* Frameworks */,
 				FA64D0772662DA110019771D /* Resources */,
+				4F70DA8B172B2574F1589CEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,17 +288,59 @@
 				FA4DB9BC266C345C00651A92 /* Kompanije 1x.png in Resources */,
 				FA3CCF42268D2B0B00FEA92E /* MenuView.xib in Resources */,
 				FA64D0842662DA110019771D /* Main.storyboard in Resources */,
+				FABBEA89269F114300BF52ED /* GoogleService-Info.plist in Resources */,
 				FA4DB9C6266C34DB00651A92 /* Roboto-Thin.ttf in Resources */,
 				FA4DB9D72670780800651A92 /* UserCollectionViewCell.xib in Resources */,
 				FA4DB9BB266C345C00651A92 /* Fizicka lica 2x.png in Resources */,
 				FA4DB9BA266C345C00651A92 /* Fizicka lica 3x.png in Resources */,
 				FA4DB9BF266C345C00651A92 /* Kompanije 3x.png in Resources */,
-				FA4DB9C8266C35B400651A92 /* Info.plist in Resources */,
 				FA3CCF52268E695A00FEA92E /* SearchHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18B508F8C8E211C8F37D1E76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TersApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F70DA8B172B2574F1589CEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TersApp/Pods-TersApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TersApp/Pods-TersApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TersApp/Pods-TersApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA64D0752662DA110019771D /* Sources */ = {
@@ -433,6 +503,7 @@
 		};
 		FA64D08E2662DA120019771D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390D1BF0359A2EC32C6D29D9 /* Pods-TersApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -455,6 +526,7 @@
 		};
 		FA64D08F2662DA120019771D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19F9298F62A5392A7FC01CB3 /* Pods-TersApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

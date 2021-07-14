@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import Firebase
+import Alamofire
+
 
 
 class ViewController: UIViewController {
@@ -16,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var allCategoriesBtn: UIButton!
     @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var menuContainer: UIView!
+    
+  
     
     private let menuView = MenuView.instanceFromNib() as! MenuView
     

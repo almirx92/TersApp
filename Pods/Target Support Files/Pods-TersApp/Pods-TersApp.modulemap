@@ -1,0 +1,6 @@
+module Pods_TersApp {
+  umbrella header "Pods-TersApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
