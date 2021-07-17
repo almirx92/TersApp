@@ -8,7 +8,7 @@
 import UIKit
 import Eureka
 
-class FormViewController: FormViewController {
+class AddFormViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

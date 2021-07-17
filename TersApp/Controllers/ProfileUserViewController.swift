@@ -2,6 +2,7 @@
 
 import UIKit
 import Firebase
+import Eureka
 
 class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MenuViewDelegate {
     
@@ -191,3 +192,5 @@ class ProfileUserViewController: UIViewController, UICollectionViewDelegate, UIC
     }
 
 }
+
+

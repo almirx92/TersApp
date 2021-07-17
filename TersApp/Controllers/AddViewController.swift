@@ -6,41 +6,52 @@
 //
 
 import UIKit
+import Eureka
 
-class AddViewController: UIViewController, MenuViewDelegate {
+class AddViewController: FormViewController, MenuViewDelegate {
    
-    
-    
     @IBOutlet weak var menuContainer: UIView!
-    @IBOutlet weak var formView: UIView!
+    @IBOutlet weak var customTableView: UITableView!
     
-    @IBOutlet weak var saveBtn: UIButton!
+    private let menuView = MenuView.instanceFromNib() as! MenuView 
     
-    private let menuView = MenuView.instanceFromNib() as! MenuView
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
-        // Do any additional setup after loading the view.
-        menuContainer.addSubview(menuView)
-        menuView.delegate = self
         
+        
+        // Do any additional setup after loading the view.
+        //menuContainer.addSubview(menuView)
+        //menuView.delegate = self
         setup()
+        form +++ Section("Section1")
+                    <<< TextRow(){ row in
+                        row.title = "Text Row"
+                        row.placeholder = "Enter text here"
+                    }
+                    <<< PhoneRow(){
+                        $0.title = "Phone Row"
+                        $0.placeholder = "And numbers here"
+                    }
+                +++ Section("Section2")
+                    <<< DateRow(){
+                        $0.title = "Date Row"
+                        $0.value = Date(timeIntervalSinceReferenceDate: 0)
+                    }
+            
     }
     override var prefersStatusBarHidden: Bool {
         return true
     }
     override func viewWillLayoutSubviews() {
-        menuView.frame = menuContainer.bounds
+        //menuView.frame = menuContainer.bounds
     }
     
     func setup(){
-        formView.layer.cornerRadius = 10.0
-    
-        saveBtn.layer.cornerRadius = 7
-        saveBtn.layer.backgroundColor = UIColor(hexString: "F9EC1E").cgColor
+//        formView.layer.cornerRadius = 10.0
+//
+//        saveBtn.layer.cornerRadius = 7
+//        saveBtn.layer.backgroundColor = UIColor(hexString: "F9EC1E").cgColor
         
     }
     

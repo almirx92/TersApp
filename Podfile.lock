@@ -219,6 +219,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - Eureka (5.3.3)
   - Firebase (8.3.0):
     - Firebase/Core (= 8.3.0)
   - Firebase/Auth (8.3.0):
@@ -352,6 +353,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Eureka
   - Firebase
   - Firebase/Auth
   - Firebase/Core
@@ -362,6 +364,7 @@ SPEC REPOS:
     - abseil
     - Alamofire
     - BoringSSL-GRPC
+    - Eureka
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -383,6 +386,7 @@ SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  Eureka: e6d720290c56bb23333ad1a0e020b2a98a0e9a43
   Firebase: 817b9171d0d51dccc458b94a5e8edff6b1dd323d
   FirebaseAnalytics: 456f2c51599870a15ded4548d1f1f7b2cabf65a7
   FirebaseAuth: fd12c82de44e7ad3b821610c387b8251f03aa0f9
@@ -400,6 +404,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: c6f1bfb7e828f6a543b6cd7ddee229210aef81a7
+PODFILE CHECKSUM: ba44f60f1f83f3d04a7a5a01c5173b0959efea26
 
 COCOAPODS: 1.10.1
