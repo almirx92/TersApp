@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,7 +51,7 @@
 		FA2C15D826979D55000A65BA /* ContractCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContractCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA3CCF41268D2B0B00FEA92E /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		FA3CCF4B268D34D600FEA92E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
-		FA3CCF4F268E695A00FEA92E /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchHeaderView.swift; path = ../SearchHeaderView.swift; sourceTree = "<group>"; };
+		FA3CCF4F268E695A00FEA92E /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		FA3CCF50268E695A00FEA92E /* SearchHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHeaderView.xib; sourceTree = "<group>"; };
 		FA4DB9B4266C345C00651A92 /* Fizicka lica 3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fizicka lica 3x.png"; sourceTree = "<group>"; };
 		FA4DB9B5266C345C00651A92 /* Fizicka lica 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fizicka lica 2x.png"; sourceTree = "<group>"; };
@@ -127,6 +127,62 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA13881826A2CF4C000C5571 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FABBEA60269BD9DC00BF52ED /* AddViewController.swift */,
+				FA4DB9D2267075AC00651A92 /* MainNavigationViewController.swift */,
+				FAF394742693F9DD00F4272D /* ProfileUserViewController.swift */,
+				FA4DB9CE266C565A00651A92 /* NonCompanyUserViewController.swift */,
+				FA64D0802662DA110019771D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA13881926A2CFAE000C5571 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CCF4F268E695A00FEA92E /* SearchHeaderView.swift */,
+				FA3CCF4B268D34D600FEA92E /* MenuView.swift */,
+				FA2C15D3269692BB000A65BA /* DocumentsCollectionViewCell.swift */,
+				FA2C15D726979D55000A65BA /* ContractCollectionViewCell.swift */,
+				FA4DB9D42670780800651A92 /* UserCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA13881A26A2D012000C5571 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				FA3CCF50268E695A00FEA92E /* SearchHeaderView.xib */,
+				FA64D0872662DA120019771D /* LaunchScreen.storyboard */,
+				FA64D0822662DA110019771D /* Main.storyboard */,
+				FA3CCF41268D2B0B00FEA92E /* MenuView.xib */,
+				FA2C15D4269692BB000A65BA /* DocumentsCollectionViewCell.xib */,
+				FA4DB9D52670780800651A92 /* UserCollectionViewCell.xib */,
+				FA2C15D826979D55000A65BA /* ContractCollectionViewCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		FA13881C26A2D057000C5571 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA13881D26A2D08C000C5571 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FA64D07C2662DA110019771D /* AppDelegate.swift */,
+				FA64D07E2662DA110019771D /* SceneDelegate.swift */,
+				FABBEA88269F114300BF52ED /* GoogleService-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		FA4DB9B3266C345C00651A92 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,29 +219,13 @@
 		FA64D07B2662DA110019771D /* TersApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA64D07C2662DA110019771D /* AppDelegate.swift */,
-				FA64D07E2662DA110019771D /* SceneDelegate.swift */,
-				FA64D0802662DA110019771D /* ViewController.swift */,
-				FA4DB9CE266C565A00651A92 /* NonCompanyUserViewController.swift */,
-				FAF394742693F9DD00F4272D /* ProfileUserViewController.swift */,
-				FA64D0822662DA110019771D /* Main.storyboard */,
+				FA13881C26A2D057000C5571 /* Models */,
+				FA13881926A2CFAE000C5571 /* Views */,
+				FA13881826A2CF4C000C5571 /* Controllers */,
+				FA13881A26A2D012000C5571 /* Xibs */,
+				FA13881D26A2D08C000C5571 /* Config */,
 				FA64D0852662DA120019771D /* Assets.xcassets */,
-				FA64D0872662DA120019771D /* LaunchScreen.storyboard */,
 				FA64D08A2662DA120019771D /* Info.plist */,
-				FA64D0DB266492FA0019771D /* UIColor+HexColor.swift */,
-				FA4DB9D2267075AC00651A92 /* MainNavigationViewController.swift */,
-				FA3CCF4B268D34D600FEA92E /* MenuView.swift */,
-				FA3CCF41268D2B0B00FEA92E /* MenuView.xib */,
-				FA3CCF4F268E695A00FEA92E /* SearchHeaderView.swift */,
-				FA3CCF50268E695A00FEA92E /* SearchHeaderView.xib */,
-				FA4DB9D42670780800651A92 /* UserCollectionViewCell.swift */,
-				FA4DB9D52670780800651A92 /* UserCollectionViewCell.xib */,
-				FA2C15D3269692BB000A65BA /* DocumentsCollectionViewCell.swift */,
-				FA2C15D4269692BB000A65BA /* DocumentsCollectionViewCell.xib */,
-				FA2C15D726979D55000A65BA /* ContractCollectionViewCell.swift */,
-				FA2C15D826979D55000A65BA /* ContractCollectionViewCell.xib */,
-				FABBEA60269BD9DC00BF52ED /* AddViewController.swift */,
-				FABBEA88269F114300BF52ED /* GoogleService-Info.plist */,
 			);
 			path = TersApp;
 			sourceTree = "<group>";
