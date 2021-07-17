@@ -11,7 +11,8 @@ import Eureka
 class AddViewController: FormViewController, MenuViewDelegate {
    
     @IBOutlet weak var menuContainer: UIView!
-    @IBOutlet weak var customTableView: UITableView!
+    @IBOutlet weak var tableViewContainer: UIView!
+    
     
     private let menuView = MenuView.instanceFromNib() as! MenuView 
     
@@ -19,25 +20,48 @@ class AddViewController: FormViewController, MenuViewDelegate {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        
+        tableView.frame = tableViewContainer.frame
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
         // Do any additional setup after loading the view.
         //menuContainer.addSubview(menuView)
         //menuView.delegate = self
         setup()
-        form +++ Section("Section1")
-                    <<< TextRow(){ row in
-                        row.title = "Text Row"
-                        row.placeholder = "Enter text here"
-                    }
-                    <<< PhoneRow(){
-                        $0.title = "Phone Row"
-                        $0.placeholder = "And numbers here"
-                    }
-                +++ Section("Section2")
-                    <<< DateRow(){
-                        $0.title = "Date Row"
-                        $0.value = Date(timeIntervalSinceReferenceDate: 0)
-                    }
+        form
+            +++ Section("Section1")
+            <<< TextRow(){ row in
+                row.placeholder = "Enter text here"
+            }
+            
+            <<< TextRow().cellSetup({ cell, row in
+                row.baseCell.isUserInteractionEnabled = false
+                cell.height = ({return 10.0})
+            })
+            // Placeholder row for the border
+            <<< TextRow().cellSetup({ cell, row in
+                row.baseCell.isUserInteractionEnabled = false
+                cell.height = ({return 10.0})
+            })
+        
+            +++ Section("Section1")
+            <<< TextRow(){ row in
+                row.placeholder = "Enter text here"
+            }
+            
+            // Placeholder row for the border
+            <<< TextRow().cellSetup({ cell, row in
+                row.baseCell.isUserInteractionEnabled = false
+                cell.height = ({return 10.0})
+            })
+            <<< TextRow().cellSetup({ cell, row in
+                row.baseCell.isUserInteractionEnabled = false
+                cell.height = ({return 10.0})
+            })
+        
+            for section in form.allSections {
+                let lastRow = section.allRows.last!
+                lastRow.baseCell.addBorder(for: .top, withColor: .red, borderWidth: 1.0)
+            }
             
     }
     override var prefersStatusBarHidden: Bool {
@@ -80,4 +104,40 @@ class AddViewController: FormViewController, MenuViewDelegate {
         }
     }
     
+}
+
+enum Border: Int {
+    case top = 0
+    case bottom
+    case right
+    case left
+}
+
+extension UIView {
+    func addBorder(for side: Border, withColor color: UIColor, borderWidth: CGFloat)  {
+       let borderLayer = CALayer()
+       borderLayer.backgroundColor = color.cgColor
+
+       let xOrigin: CGFloat = (side == .right ? frame.width - borderWidth : 0)
+       let yOrigin: CGFloat = (side == .bottom ? frame.height - borderWidth : 0)
+
+       let width: CGFloat = (side == .right || side == .left) ? borderWidth : frame.width
+       let height: CGFloat = (side == .top || side == .bottom) ? borderWidth : frame.height
+
+       borderLayer.frame = CGRect(x: xOrigin, y: yOrigin, width: width, height: height)
+       layer.addSublayer(borderLayer)
+
+    }
+}
+
+extension CALayer {
+    func updateBorderLayer(for side: Border, withViewFrame viewFrame: CGRect) {
+        let xOrigin: CGFloat = (side == .right ? viewFrame.width - frame.width : 0)
+        let yOrigin: CGFloat = (side == .bottom ? viewFrame.height - frame.height : 0)
+
+        let width: CGFloat = (side == .right || side == .left) ? frame.width : viewFrame.width
+        let height: CGFloat = (side == .top || side == .bottom) ? frame.height : viewFrame.height
+
+        frame = CGRect(x: xOrigin, y: yOrigin, width: width, height: height)
+    }
 }

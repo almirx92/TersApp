@@ -22,9 +22,6 @@
 		FA4DB9BD266C345C00651A92 /* Kompanije 2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9B7266C345C00651A92 /* Kompanije 2x.png */; };
 		FA4DB9BE266C345C00651A92 /* Fizicka lica 1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9B8266C345C00651A92 /* Fizicka lica 1x.png */; };
 		FA4DB9BF266C345C00651A92 /* Kompanije 3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9B9266C345C00651A92 /* Kompanije 3x.png */; };
-		FA4DB9C4266C34DB00651A92 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9C1266C34DB00651A92 /* Roboto-Medium.ttf */; };
-		FA4DB9C5266C34DB00651A92 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9C2266C34DB00651A92 /* Roboto-Regular.ttf */; };
-		FA4DB9C6266C34DB00651A92 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4DB9C3266C34DB00651A92 /* Roboto-Thin.ttf */; };
 		FA4DB9CF266C565A00651A92 /* NonCompanyUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB9CE266C565A00651A92 /* NonCompanyUserViewController.swift */; };
 		FA4DB9D3267075AC00651A92 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB9D2267075AC00651A92 /* MainNavigationViewController.swift */; };
 		FA4DB9D62670780800651A92 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DB9D42670780800651A92 /* UserCollectionViewCell.swift */; };
@@ -39,6 +36,9 @@
 		FABBEA61269BD9DC00BF52ED /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABBEA60269BD9DC00BF52ED /* AddViewController.swift */; };
 		FABBEA89269F114300BF52ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FABBEA88269F114300BF52ED /* GoogleService-Info.plist */; };
 		FAF394752693F9DD00F4272D /* ProfileUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF394742693F9DD00F4272D /* ProfileUserViewController.swift */; };
+		FFBD092926A3017D00832CF3 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFBD092626A3017C00832CF3 /* Roboto-Thin.ttf */; };
+		FFBD092A26A3017D00832CF3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFBD092726A3017D00832CF3 /* Roboto-Regular.ttf */; };
+		FFBD092B26A3017D00832CF3 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFBD092826A3017D00832CF3 /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,9 +59,6 @@
 		FA4DB9B7266C345C00651A92 /* Kompanije 2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kompanije 2x.png"; sourceTree = "<group>"; };
 		FA4DB9B8266C345C00651A92 /* Fizicka lica 1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fizicka lica 1x.png"; sourceTree = "<group>"; };
 		FA4DB9B9266C345C00651A92 /* Kompanije 3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kompanije 3x.png"; sourceTree = "<group>"; };
-		FA4DB9C1266C34DB00651A92 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../font/Roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		FA4DB9C2266C34DB00651A92 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../font/Roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		FA4DB9C3266C34DB00651A92 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../font/Roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		FA4DB9CE266C565A00651A92 /* NonCompanyUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonCompanyUserViewController.swift; sourceTree = "<group>"; };
 		FA4DB9D2267075AC00651A92 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		FA4DB9D42670780800651A92 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +93,9 @@
 		FABBEA60269BD9DC00BF52ED /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		FABBEA88269F114300BF52ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FAF394742693F9DD00F4272D /* ProfileUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserViewController.swift; sourceTree = "<group>"; };
+		FFBD092626A3017C00832CF3 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		FFBD092726A3017D00832CF3 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		FFBD092826A3017D00832CF3 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,9 +233,9 @@
 		FA64D0B62662DEE60019771D /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FA4DB9C1266C34DB00651A92 /* Roboto-Medium.ttf */,
-				FA4DB9C2266C34DB00651A92 /* Roboto-Regular.ttf */,
-				FA4DB9C3266C34DB00651A92 /* Roboto-Thin.ttf */,
+				FFBD092826A3017D00832CF3 /* Roboto-Medium.ttf */,
+				FFBD092726A3017D00832CF3 /* Roboto-Regular.ttf */,
+				FFBD092626A3017C00832CF3 /* Roboto-Thin.ttf */,
 				FA64D0CC2662DFAC0019771D /* Poppins-BlackItalic.ttf */,
 				FA64D0C42662DFAC0019771D /* Poppins-Bold.ttf */,
 				FA64D0CB2662DFAC0019771D /* Poppins-BoldItalic.ttf */,
@@ -317,22 +317,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBD092926A3017D00832CF3 /* Roboto-Thin.ttf in Resources */,
 				FA2C15DA26979D55000A65BA /* ContractCollectionViewCell.xib in Resources */,
-				FA4DB9C4266C34DB00651A92 /* Roboto-Medium.ttf in Resources */,
-				FA4DB9C5266C34DB00651A92 /* Roboto-Regular.ttf in Resources */,
 				FA2C15D6269692BB000A65BA /* DocumentsCollectionViewCell.xib in Resources */,
 				FA4DB9BD266C345C00651A92 /* Kompanije 2x.png in Resources */,
 				FA4DB9BE266C345C00651A92 /* Fizicka lica 1x.png in Resources */,
 				FA64D0892662DA120019771D /* LaunchScreen.storyboard in Resources */,
 				FA64D0862662DA120019771D /* Assets.xcassets in Resources */,
 				FA4DB9BC266C345C00651A92 /* Kompanije 1x.png in Resources */,
+				FFBD092B26A3017D00832CF3 /* Roboto-Medium.ttf in Resources */,
 				FA3CCF42268D2B0B00FEA92E /* MenuView.xib in Resources */,
 				FA64D0842662DA110019771D /* Main.storyboard in Resources */,
 				FABBEA89269F114300BF52ED /* GoogleService-Info.plist in Resources */,
-				FA4DB9C6266C34DB00651A92 /* Roboto-Thin.ttf in Resources */,
 				FA4DB9D72670780800651A92 /* UserCollectionViewCell.xib in Resources */,
 				FA4DB9BB266C345C00651A92 /* Fizicka lica 2x.png in Resources */,
 				FA4DB9BA266C345C00651A92 /* Fizicka lica 3x.png in Resources */,
+				FFBD092A26A3017D00832CF3 /* Roboto-Regular.ttf in Resources */,
 				FA4DB9BF266C345C00651A92 /* Kompanije 3x.png in Resources */,
 				FA3CCF52268E695A00FEA92E /* SearchHeaderView.xib in Resources */,
 			);

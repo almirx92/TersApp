@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MZh-ht-Ljn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MZh-ht-Ljn">
     <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -233,24 +233,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8Sr-SO-rTs" userLabel="FormTableView">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="1004"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0W-gq-KLG">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="1004"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="t08-O8-nfC"/>
+                                    <constraint firstAttribute="width" constant="300" id="Gvh-3G-urI"/>
                                 </constraints>
-                            </tableView>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neki testni kod" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heF-hV-X9h">
+                                <rect key="frame" x="320" y="20" width="1026" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d5Q-yt-4QA"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98431372549019602" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8Sr-SO-rTs" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" id="cek-4L-4dX"/>
-                            <constraint firstItem="d5Q-yt-4QA" firstAttribute="bottom" secondItem="8Sr-SO-rTs" secondAttribute="bottom" id="gUo-xl-cDc"/>
-                            <constraint firstItem="8Sr-SO-rTs" firstAttribute="top" secondItem="d5Q-yt-4QA" secondAttribute="top" id="mSA-t5-RF6"/>
+                            <constraint firstItem="d5Q-yt-4QA" firstAttribute="trailing" secondItem="heF-hV-X9h" secondAttribute="trailing" constant="20" id="7YN-6t-8CY"/>
+                            <constraint firstItem="heF-hV-X9h" firstAttribute="leading" secondItem="W0W-gq-KLG" secondAttribute="trailing" constant="20" id="Cbt-BQ-aym"/>
+                            <constraint firstItem="d5Q-yt-4QA" firstAttribute="bottom" secondItem="W0W-gq-KLG" secondAttribute="bottom" id="Iw6-jJ-HzM"/>
+                            <constraint firstItem="W0W-gq-KLG" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" id="Y3j-i9-OEl"/>
+                            <constraint firstItem="heF-hV-X9h" firstAttribute="top" secondItem="d5Q-yt-4QA" secondAttribute="top" constant="20" id="cXN-3J-MSO"/>
+                            <constraint firstItem="W0W-gq-KLG" firstAttribute="top" secondItem="d5Q-yt-4QA" secondAttribute="top" id="d33-2W-n64"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="customTableView" destination="8Sr-SO-rTs" id="HTb-W1-t9k"/>
+                        <outlet property="tableViewContainer" destination="W0W-gq-KLG" id="d9g-Gk-YVY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7T-dc-0b7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
