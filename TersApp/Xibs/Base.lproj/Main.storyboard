@@ -234,22 +234,33 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0W-gq-KLG">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="1004"/>
+                                <rect key="frame" x="80" y="0.0" width="300" height="1004"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Gvh-3G-urI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-Dm-0kt" userLabel="MenuViewContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="1024"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Vc8-YP-aLi"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d5Q-yt-4QA"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98431372549019602" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="W0W-gq-KLG" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" id="655-0v-mDo"/>
+                            <constraint firstItem="W0W-gq-KLG" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" constant="80" id="655-0v-mDo"/>
+                            <constraint firstItem="aq3-Dm-0kt" firstAttribute="top" secondItem="sgi-gx-e8T" secondAttribute="top" id="9KB-lW-ewL"/>
+                            <constraint firstItem="aq3-Dm-0kt" firstAttribute="bottom" secondItem="sgi-gx-e8T" secondAttribute="bottom" id="HkZ-wf-T2n"/>
                             <constraint firstItem="d5Q-yt-4QA" firstAttribute="bottom" secondItem="W0W-gq-KLG" secondAttribute="bottom" id="Iw6-jJ-HzM"/>
+                            <constraint firstItem="aq3-Dm-0kt" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" id="Szp-iR-Cow"/>
                             <constraint firstItem="W0W-gq-KLG" firstAttribute="top" secondItem="d5Q-yt-4QA" secondAttribute="top" id="d33-2W-n64"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="menuContainer" destination="aq3-Dm-0kt" id="SZj-w6-X3k"/>
                         <outlet property="tableViewContainer" destination="W0W-gq-KLG" id="d9g-Gk-YVY"/>
                     </connections>
                 </viewController>

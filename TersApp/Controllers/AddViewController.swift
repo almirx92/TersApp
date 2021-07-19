@@ -23,8 +23,8 @@ class AddViewController: FormViewController, MenuViewDelegate {
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         // Do any additional setup after loading the view.
-        //menuContainer.addSubview(menuView)
-        //menuView.delegate = self
+        menuContainer.addSubview(menuView)
+        menuView.delegate = self
         setup()
         form
             +++ Section("JIB")
@@ -70,20 +70,7 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 cell.height = {50.0}
                 cell.addBorder(for: .bottom, withColor: .systemGray, borderWidth: 1.0)
             })
-
-        
-//            for section in form.allSections {
-//                let lastRow = section.allRows.last!
-//                print(lastRow.tag as Any)
-//                if let lastRow = lastRow as? TextRow {
-//                lastRow.baseCell.addBorder(for: .bottom, withColor: .systemRed, borderWidth: 1.0)
-//
-    
-               }
-
-            
-            
-    
+    }
     override var prefersStatusBarHidden: Bool {
         return true
     }
