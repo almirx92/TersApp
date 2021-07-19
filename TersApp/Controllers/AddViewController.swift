@@ -13,7 +13,6 @@ class AddViewController: FormViewController, MenuViewDelegate {
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var tableViewContainer: UIView!
     
-    
     private let menuView = MenuView.instanceFromNib() as! MenuView 
     
     override func viewDidLoad() {
@@ -28,42 +27,63 @@ class AddViewController: FormViewController, MenuViewDelegate {
         //menuView.delegate = self
         setup()
         form
-            +++ Section("Section1")
+            +++ Section("JIB")
             <<< TextRow(){ row in
-                row.placeholder = "Enter text here"
+                row.placeholder = "4303425000001"
+                
+                
             }
-            
-            <<< TextRow().cellSetup({ cell, row in
-                row.baseCell.isUserInteractionEnabled = false
-                cell.height = ({return 10.0})
-            })
-            // Placeholder row for the border
-            <<< TextRow().cellSetup({ cell, row in
-                row.baseCell.isUserInteractionEnabled = false
-                cell.height = ({return 10.0})
-            })
-        
-            +++ Section("Section1")
+            +++ Section("PDV")
             <<< TextRow(){ row in
-                row.placeholder = "Enter text here"
+                row.placeholder = "303425000001"
             }
-            
+      
             // Placeholder row for the border
-            <<< TextRow().cellSetup({ cell, row in
-                row.baseCell.isUserInteractionEnabled = false
-                cell.height = ({return 10.0})
+            <<< TextRow() { row in
+
+            }.cellSetup({ cell, row in
+                cell.height = {50.0}
+                cell.addBorder(for: .bottom, withColor: .systemGray, borderWidth: 1.0)
+                
             })
-            <<< TextRow().cellSetup({ cell, row in
-                row.baseCell.isUserInteractionEnabled = false
-                cell.height = ({return 10.0})
-            })
-        
-            for section in form.allSections {
-                let lastRow = section.allRows.last!
-                lastRow.baseCell.addBorder(for: .top, withColor: .red, borderWidth: 1.0)
+
+            +++ Section("Email Address")
+            <<< TextRow(){ row in
+                row.placeholder = "pearshadow@gmail.com"
             }
+            +++ Section("Company Address")
+            <<< TextRow(){ row in
+                row.placeholder = "24. Juna br. 15 71320, Vogosca, Bosna i Hercegovina"
+            }
+            +++ Section("Phone Number")
+            <<< TextRow(){ row in
+                row.placeholder = "+62 812 231 731 / +62 811 984 312"
+            }
+            +++ Section("Company Website")
+            <<< TextRow(){ row in
+                row.placeholder = "pearshadow.com"
+            }
+            <<< TextRow() { row in
+
+            }.cellSetup({ cell, row in
+                row.tag = "hasBorder"
+                cell.height = {50.0}
+                cell.addBorder(for: .bottom, withColor: .systemGray, borderWidth: 1.0)
+            })
+
+        
+//            for section in form.allSections {
+//                let lastRow = section.allRows.last!
+//                print(lastRow.tag as Any)
+//                if let lastRow = lastRow as? TextRow {
+//                lastRow.baseCell.addBorder(for: .bottom, withColor: .systemRed, borderWidth: 1.0)
+//
+    
+               }
+
             
-    }
+            
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
