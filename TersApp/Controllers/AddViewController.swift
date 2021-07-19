@@ -43,7 +43,10 @@ class AddViewController: FormViewController, MenuViewDelegate {
 
             }.cellSetup({ cell, row in
                 cell.height = {50.0}
-                cell.addBorder(for: .bottom, withColor: .systemGray, borderWidth: 1.0)
+                cell.addBorder(for: .bottom, withColor: UIColor(hexString: "#F1F1F5"), borderWidth: 1.0)
+                cell.isUserInteractionEnabled = false
+                
+               
                 
             })
 
@@ -66,23 +69,19 @@ class AddViewController: FormViewController, MenuViewDelegate {
             <<< TextRow() { row in
 
             }.cellSetup({ cell, row in
-                row.tag = "hasBorder"
                 cell.height = {50.0}
-                cell.addBorder(for: .bottom, withColor: .systemGray, borderWidth: 1.0)
+                cell.addBorder(for: .bottom, withColor:UIColor(hexString: "#F1F1F5"), borderWidth: 1.0)
+                cell.isUserInteractionEnabled = false
             })
     }
     override var prefersStatusBarHidden: Bool {
         return true
     }
     override func viewWillLayoutSubviews() {
-        //menuView.frame = menuContainer.bounds
+    
     }
     
     func setup(){
-//        formView.layer.cornerRadius = 10.0
-//
-//        saveBtn.layer.cornerRadius = 7
-//        saveBtn.layer.backgroundColor = UIColor(hexString: "F9EC1E").cgColor
         
     }
     

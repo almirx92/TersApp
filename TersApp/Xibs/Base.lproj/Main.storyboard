@@ -233,11 +233,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0W-gq-KLG">
-                                <rect key="frame" x="80" y="0.0" width="300" height="1004"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-RB-IvI" userLabel="TViewContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="1024"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0W-gq-KLG">
+                                        <rect key="frame" x="100" y="0.0" width="180" height="1024"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Gvh-3G-urI"/>
+                                    <constraint firstAttribute="trailing" secondItem="W0W-gq-KLG" secondAttribute="trailing" constant="20" id="2Re-k9-p95"/>
+                                    <constraint firstItem="W0W-gq-KLG" firstAttribute="top" secondItem="Cvh-RB-IvI" secondAttribute="top" id="BlU-JY-z5W"/>
+                                    <constraint firstItem="W0W-gq-KLG" firstAttribute="leading" secondItem="Cvh-RB-IvI" secondAttribute="leading" constant="100" id="Evs-Di-lbW"/>
+                                    <constraint firstAttribute="bottom" secondItem="W0W-gq-KLG" secondAttribute="bottom" id="MVT-t8-QIM"/>
+                                    <constraint firstAttribute="width" constant="300" id="Zgp-N3-Rnf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-Dm-0kt" userLabel="MenuViewContainer">
@@ -251,12 +261,12 @@
                         <viewLayoutGuide key="safeArea" id="d5Q-yt-4QA"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98431372549019602" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="W0W-gq-KLG" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" constant="80" id="655-0v-mDo"/>
+                            <constraint firstAttribute="bottom" secondItem="Cvh-RB-IvI" secondAttribute="bottom" id="0nC-9Z-ccj"/>
+                            <constraint firstItem="Cvh-RB-IvI" firstAttribute="leading" secondItem="aq3-Dm-0kt" secondAttribute="leading" id="1jX-Pa-a0f"/>
                             <constraint firstItem="aq3-Dm-0kt" firstAttribute="top" secondItem="sgi-gx-e8T" secondAttribute="top" id="9KB-lW-ewL"/>
                             <constraint firstItem="aq3-Dm-0kt" firstAttribute="bottom" secondItem="sgi-gx-e8T" secondAttribute="bottom" id="HkZ-wf-T2n"/>
-                            <constraint firstItem="d5Q-yt-4QA" firstAttribute="bottom" secondItem="W0W-gq-KLG" secondAttribute="bottom" id="Iw6-jJ-HzM"/>
                             <constraint firstItem="aq3-Dm-0kt" firstAttribute="leading" secondItem="d5Q-yt-4QA" secondAttribute="leading" id="Szp-iR-Cow"/>
-                            <constraint firstItem="W0W-gq-KLG" firstAttribute="top" secondItem="d5Q-yt-4QA" secondAttribute="top" id="d33-2W-n64"/>
+                            <constraint firstItem="Cvh-RB-IvI" firstAttribute="top" secondItem="sgi-gx-e8T" secondAttribute="top" id="fYb-PL-0Ra"/>
                         </constraints>
                     </view>
                     <connections>
