@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88BE8BE7A2FE6CED4193CCD8FF3CBEF7"
-               BuildableName = "libEureka.a"
-               BlueprintName = "Eureka"
+               BlueprintIdentifier = "FDEED0C73551C2A79D389CF0E6A14650"
+               BuildableName = "libImageRow.a"
+               BlueprintName = "ImageRow"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

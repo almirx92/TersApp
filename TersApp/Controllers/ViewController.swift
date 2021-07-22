@@ -103,7 +103,7 @@ extension ViewController: MenuViewDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc =
                 storyboard.instantiateViewController(identifier: "AddViewController") as! AddViewController
-            navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: false)
             
         
         case .doc:
