@@ -18,6 +18,7 @@ class ProfileUserViewController: FormViewController, UICollectionViewDelegate, U
     }
     
     var activeSection: ProfileUserSections = .documents
+    var newUser = AddNewUserFormRequest()
     
     @IBOutlet var viewContainer: UIView!
     @IBOutlet weak var DocumentContainer: UIView!
@@ -58,8 +59,186 @@ class ProfileUserViewController: FormViewController, UICollectionViewDelegate, U
         self.hideKeyboardWhenTappedAround()
         
         //-------------Eureka Form-----------------------
-        tableView.backgroundColor = .red
+        tableView.frame = infoContainerView.frame
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .none
+        form
+            +++ Section(){ section in
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "JIB"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 15 }
+                  return header
+                }()
+            }
+            <<< TextRow(){ row in
+                row.placeholder = "4303425000001"
+                row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.jib = row.value
+                print(self.newUser.jib as Any)
+                
+            }.cellSetup({ cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
+            })
+            +++ Section(){ section in
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "PDV"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 15 }
+                  return header
+                }()
+            }
+            <<< TextRow(){ row in
+                row.placeholder = "303425000001"
+                row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.pdv = row.value
+                print(self.newUser.pdv as Any)
+            }.cellSetup({cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
+            })
+            // Placeholder row for the border
+            <<< TextRow() { row in
+
+            }.cellSetup({ cell, row in
+                cell.height = {50.0}
+                cell.addBorder(for: .bottom, withColor: UIColor(hexString: "#F1F1F5"), borderWidth: 1.0)
+                cell.isUserInteractionEnabled = false
+            })
+
+            +++ Section(){ section in
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Email Address"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 15 }
+                  return header
+                }()
+            }
         
+            <<< TextRow(){ row in
+                row.placeholder = "pearshadow@gmail.com"
+                row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.emailAddress = row.value
+                print(self.newUser.emailAddress as Any)
+            }.cellSetup({cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
+            })
+            +++ Section(){ section in
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Company Address"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 15 }
+                  return header
+                }()
+            }
+            <<< TextRow(){ row in
+                row.placeholder = "24. Juna br. 15 71320, Vogosca, Bosna i Hercegovina"
+                row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.companyAddress = row.value
+                print(self.newUser.companyAddress as Any)
+            }.cellSetup({cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
+            })
+            +++ Section(){ section in
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Phone Number"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 15 }
+                  return header
+                }()
+            }
+            <<< TextRow(){ row in
+                row.placeholder = "+62 812 231 731 / +62 811 984 312"
+                row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.phoneNumber = row.value
+                print(self.newUser.phoneNumber as Any)
+            }.cellSetup({cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
+                cell.textField.textAlignment = .left
+            })
+            +++ Section(){ section in
+                section.header = {
+                    var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Company Website"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 15 }
+                  return header
+                }()
+            }
+            <<< TextRow(){ row in
+                row.placeholder = "pearshadow.com"
+                row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.website = row.value
+                print(self.newUser.website as Any)
+            }.cellSetup {cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 44)
+            }
+            
+            <<< TextRow() { row in
+
+            }.cellSetup({ cell, row in
+                cell.height = {50.0}
+                cell.addBorder(for: .bottom, withColor:UIColor(hexString: "#F1F1F5"), borderWidth: 1.0)
+                cell.isUserInteractionEnabled = false
+            })
         //-----------------------------------------------
         
         setup()
@@ -110,7 +289,6 @@ class ProfileUserViewController: FormViewController, UICollectionViewDelegate, U
         activeSection = .contract
         docCollectionView.reloadData()
     }
-    
     
     override var prefersStatusBarHidden: Bool {
         return true

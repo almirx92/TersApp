@@ -7,7 +7,7 @@
 
 import UIKit
 import Eureka
-import ImageRow
+import Firebase
 
 class AddViewController: FormViewController, MenuViewDelegate {
    
@@ -50,8 +50,11 @@ class AddViewController: FormViewController, MenuViewDelegate {
             <<< TextRow(){ row in
                 row.placeholder = "4303425000001"
                 row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.jib = row.value
+                print(self.newUser.jib as Any)
                 
-            }.cellSetup({cell, row int
+            }.cellSetup({ cell, row in
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
             })
             +++ Section(){ section in
@@ -74,6 +77,9 @@ class AddViewController: FormViewController, MenuViewDelegate {
             <<< TextRow(){ row in
                 row.placeholder = "303425000001"
                 row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.pdv = row.value
+                print(self.newUser.pdv as Any)
             }.cellSetup({cell, row in
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
             })
@@ -107,6 +113,9 @@ class AddViewController: FormViewController, MenuViewDelegate {
             <<< TextRow(){ row in
                 row.placeholder = "pearshadow@gmail.com"
                 row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.emailAddress = row.value
+                print(self.newUser.emailAddress as Any)
             }.cellSetup({cell, row in
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
             })
@@ -130,6 +139,9 @@ class AddViewController: FormViewController, MenuViewDelegate {
             <<< TextRow(){ row in
                 row.placeholder = "24. Juna br. 15 71320, Vogosca, Bosna i Hercegovina"
                 row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.companyAddress = row.value
+                print(self.newUser.companyAddress as Any)
             }.cellSetup({cell, row in
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
             })
@@ -153,6 +165,9 @@ class AddViewController: FormViewController, MenuViewDelegate {
             <<< TextRow(){ row in
                 row.placeholder = "+62 812 231 731 / +62 811 984 312"
                 row.placeholderColor = .black
+            }.onChange { row in
+                self.newUser.phoneNumber = row.value
+                print(self.newUser.phoneNumber as Any)
             }.cellSetup({cell, row in
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
                 cell.textField.textAlignment = .left
@@ -179,7 +194,7 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 row.placeholderColor = .black
             }.onChange { row in
                 self.newUser.website = row.value
-                print(self.newUser.website)
+                print(self.newUser.website as Any)
             }.cellSetup {cell, row in
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 44)
             }
@@ -203,15 +218,34 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 $0.cell.tintColor = .black
                 $0.cell.layer.cornerRadius = 10.0
                 $0.cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
+            }.onCellSelection { cell, row in
+                let  db = Firestore.firestore()
+                let docData: [String: Any] = [
+                    "jib": self.newUser.jib as Any,
+                    "pdv": self.newUser.pdv as Any,
+                    "emailAddress": self.newUser.emailAddress as Any,
+                    "companyAddress": self.newUser.companyAddress as Any,
+                    "phoneNumber": self.newUser.phoneNumber as Any,
+                    "website": self.newUser.website as Any,
+                    
+            ]
+                                
+                do {
+                    try db.collection("company-users").document().setData(docData)
+                } catch let error {
+                    print("Error writing city to Firestore: \(error)")
+                }
+                print("Add New user")
+               
             }
     }
             
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    override func viewWillLayoutSubviews() {
-    
-    }
+//    override func viewWillLayoutSubviews() {
+//
+//    }
     
     func setup(){
         

@@ -7,6 +7,14 @@
 
 import Foundation
 
-struct AddNewUserFormRequest {
+public struct AddNewUserFormRequest: Codable {
+    var jib: String?
+    var pdv: String?
+    var emailAddress: String?
+    var companyAddress: String?
+    var phoneNumber: String?
     var website: String?
 }
+
+
+//dodati validaciju
