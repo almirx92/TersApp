@@ -7,5 +7,6 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Auth'
 pod 'Alamofire'
 pod 'Eureka'
+pod 'ImageRow'
 
 end

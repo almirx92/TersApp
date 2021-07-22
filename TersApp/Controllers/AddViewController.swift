@@ -7,11 +7,13 @@
 
 import UIKit
 import Eureka
+import ImageRow
 
 class AddViewController: FormViewController, MenuViewDelegate {
    
     @IBOutlet weak var menuContainer: UIView!
     @IBOutlet weak var tableViewContainer: UIView!
+    var newUser = AddNewUserFormRequest()
     
     private let menuView = MenuView.instanceFromNib() as! MenuView 
     
@@ -26,35 +28,48 @@ class AddViewController: FormViewController, MenuViewDelegate {
         menuContainer.addSubview(menuView)
         menuView.delegate = self
         setup()
+        
         form
             +++ Section(){ section in
-                var header = HeaderFooterView<UILabel>(.class)
-                header.height = {20.0}
-                header.onSetupView = {view, _ in
-                    view.textColor = UIColor(hexString: "#B5B5BE")
-                    view.text = "JIB"
-                    view.font = UIFont(name: "Roboto", size: 14)
-                }
-                section.header = header
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "JIB"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 30 }
+                  return header
+                }()
             }
             <<< TextRow(){ row in
                 row.placeholder = "4303425000001"
                 row.placeholderColor = .black
                 
-            }.cellSetup({cell, row in
+            }.cellSetup({cell, row int
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
-                
-                
             })
             +++ Section(){ section in
-                var header = HeaderFooterView<UILabel>(.class)
-                header.height = {20.0}
-                header.onSetupView = {view, _ in
-                    view.textColor = UIColor(hexString: "#B5B5BE")
-                    view.text = "PDV"
-                    view.font = UIFont(name: "Roboto", size: 14)
-                }
-                section.header = header
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "PDV"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 30 }
+                  return header
+                }()
             }
             <<< TextRow(){ row in
                 row.placeholder = "303425000001"
@@ -72,14 +87,21 @@ class AddViewController: FormViewController, MenuViewDelegate {
             })
 
             +++ Section(){ section in
-            var header = HeaderFooterView<UILabel>(.class)
-            header.height = {20.0}
-            header.onSetupView = {view, _ in
-                view.textColor = UIColor(hexString: "#B5B5BE")
-                view.text = "Email Address"
-                view.font = UIFont(name: "Roboto", size: 14)
-                }
-                section.header = header
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Email Address"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 30 }
+                  return header
+                }()
             }
         
             <<< TextRow(){ row in
@@ -89,15 +111,22 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
             })
             +++ Section(){ section in
-                var header = HeaderFooterView<UILabel>(.class)
-                header.height = {20.0}
-                header.onSetupView = {view, _ in
-                    view.textColor = UIColor(hexString: "#B5B5BE")
-                    view.text = "Company Address"
-                    view.font = UIFont(name: "Roboto", size: 14)
-                    }
-                    section.header = header
-                }
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Company Address"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 30 }
+                  return header
+                }()
+            }
             <<< TextRow(){ row in
                 row.placeholder = "24. Juna br. 15 71320, Vogosca, Bosna i Hercegovina"
                 row.placeholderColor = .black
@@ -105,15 +134,22 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
             })
             +++ Section(){ section in
-                var header = HeaderFooterView<UILabel>(.class)
-                header.height = {20.0}
-                header.onSetupView = {view, _ in
-                    view.textColor = UIColor(hexString: "#B5B5BE")
-                    view.text = "Phone Number"
-                    view.font = UIFont(name: "Roboto", size: 14)
-                    }
-                    section.header = header
-                }
+                section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Phone Number"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 30 }
+                  return header
+                }()
+            }
             <<< TextRow(){ row in
                 row.placeholder = "+62 812 231 731 / +62 811 984 312"
                 row.placeholderColor = .black
@@ -122,23 +158,32 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 cell.textField.textAlignment = .left
             })
             +++ Section(){ section in
-                var header = HeaderFooterView<UILabel>(.class)
-                header.height = {20.0}
-                header.onSetupView = {view, _ in
-                    view.textColor = UIColor(hexString: "#B5B5BE")
-                    view.text = "Company Website"
-                    view.font = UIFont(name: "Roboto", size: 14)
-                    }
-                    section.header = header
-                }
+                section.header = {
+                    var header = HeaderFooterView<UIView>(.callback({
+                    let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+                    let label = UILabel()
+                    label.text = "Company Website"
+                    label.font = UIFont(name: "Roboto", size: 14)
+                    label.textColor = UIColor(hexString: "#B5B5BE")
+                    label.frame = view.frame
+                    label.frame.origin.x += 15
+                    view.addSubview(label)
+                      return view
+                  }))
+                  header.height = { 30 }
+                  return header
+                }()
+            }
             <<< TextRow(){ row in
                 row.placeholder = "pearshadow.com"
                 row.placeholderColor = .black
-            }.cellSetup({cell, row in
-                cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
-                
-                
-            })
+            }.onChange { row in
+                self.newUser.website = row.value
+                print(self.newUser.website)
+            }.cellSetup {cell, row in
+                cell.textLabel?.font = UIFont(name: "Roboto", size: 44)
+            }
+            
             <<< TextRow() { row in
 
             }.cellSetup({ cell, row in
@@ -158,11 +203,7 @@ class AddViewController: FormViewController, MenuViewDelegate {
                 $0.cell.tintColor = .black
                 $0.cell.layer.cornerRadius = 10.0
                 $0.cell.textLabel?.font = UIFont(name: "Roboto", size: 14)
-                           }
-                           .onCellSelection { cell, row in
-                               //send data to server function
-
-                   }
+            }
     }
             
     override var prefersStatusBarHidden: Bool {
